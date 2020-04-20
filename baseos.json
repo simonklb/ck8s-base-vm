@@ -82,6 +82,10 @@
         "md5"
       ],
       "output": "{{ user `output_iso_checksum_path` }}"
+    },
+    {
+        "type": "vagrant",
+        "output": "output-vagrant/baseos.box"
     }
   ]
 }

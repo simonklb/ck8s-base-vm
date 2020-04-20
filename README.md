@@ -34,6 +34,23 @@ Build steps:
 4. Check `output-baseos` for the built qcow2 image and its associated checksum file.
 5. If you need to rebuild, first run `make clean` to remove all files created during previous builds.
 
+## Vagrant
+
+Pre-requisites:
+
+* Vagrant (https://www.vagrantup.com/downloads.html)
+* vagrant-libvirt (https://github.com/vagrant-libvirt/vagrant-libvirt#installation)
+* cloud-localds (https://command-not-found.com/cloud-localds)
+
+The build also produces a Vagrant box that can be used for some local testing.
+
+```bash
+make build
+make vagrant-up
+vagrant ssh master
+```
+
+To tear down the vagrant machine(s), run `make vagrant-down`.
 
 ## Notes
 
